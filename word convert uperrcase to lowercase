@@ -1,0 +1,17 @@
+//STl Using String
+#include <iostream>
+#include<string>
+#include<algorithm>
+#include<cstring>
+using namespace std;
+
+int main()
+{
+    string su;
+    getline(cin,su);
+    transform(su.begin(),su.end(),su.begin(),::toupper);
+  
+   transform(su.begin(), su.end(), su.begin(), ::tolower);
+    cout << su << endl;
+    return 0;
+}
