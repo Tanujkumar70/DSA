@@ -1,0 +1,24 @@
+#include <bits/stdc++.h>
+using namespace std;
+int main()
+{
+    int n;
+    cin>>n;
+    int arr[n];
+    int msum=INT_MIN;
+    
+    int sum;
+    for(int i=0;i<n;i++){
+        cin>>arr[i];
+    }
+    for(int i=0;i<n;i++){
+        sum=0;
+         for(int j=i;j<n;j++){
+             sum=sum+arr[j];
+             msum=max(msum,sum);
+         }
+    }
+    std::cout << msum << std::endl;
+    return 0;
+}
+
