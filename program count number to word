@@ -1,0 +1,25 @@
+#include <iostream>
+#include<string>
+#include<cstring>
+#include<algorithm>
+using namespace std;
+
+int main()
+{
+  char line[50];
+  int count=1,len,i; 
+  cout<<"Enter a linr";
+  cin.getline(line,50);
+  len=strlen(line);
+  for( i=0;i<len;i++ )
+      {
+          if(line[i]==' ')
+              count++;
+          }
+          cout<<"count number";
+          cout<<count;
+      
+    return 0;  
+      
+}
+      
