@@ -1,0 +1,19 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int mypow(int x,int n){
+  int ans=1.0;
+  for(int i=0;i<n;i++){
+      ans=ans*x;
+  }
+  return ans;
+    
+}
+
+
+int main()
+{
+  std::cout << mypow(2,10) << std::endl;
+
+    return 0;
+}
