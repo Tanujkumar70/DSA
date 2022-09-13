@@ -1,0 +1,25 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+class Solution {
+public:
+    int trap(vector<int>& height) {
+        int maxwater=0;
+        int vol=0;
+        int l=0;
+        int r=height.size()-1;
+        while(r>l){
+            int currmax=min(height[l],height[r]);
+            maxwater=max(maxwater,currmax);
+            if(height[l]>height[r]){
+                r--;
+                vol+=height[r]<maxwater?maxwater-height[r]:0;
+                
+            }else{
+                l++;
+                vol+=height[l]<maxwater?maxwater-height[l]:0;
+            }
+        }
+        return vol;
+    }
+};
